@@ -7,9 +7,6 @@ debug() {
   echo "----------------------------------------------"
 }
 
-debug "Installing OPENSSH-SERVER"
-apt install -y openssh-server
-
 debug "Starting service - SSH"
 service ssh start
 

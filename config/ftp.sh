@@ -14,14 +14,15 @@ fi
 
 sudo apt install -y vsftpd ftp
 service vsftpd start
-sudo ufw allow 21/tcp
+sudo ufw allow ftp
+sudo ufw allow ftp-data
 
-sudo useradd $1
 sudo mkdir -p /var/ftp/pub
 sudo chown nobody:nogroup /var/ftp/pub
 
 sudo cp /app/config/vsftpd.conf /etc/
 
 sudo cp -r $2 /var/ftp/pub
+sudo chown nobody:nogroup $2
 
 service vsftpd restart

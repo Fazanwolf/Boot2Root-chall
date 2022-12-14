@@ -7,5 +7,9 @@ debug() {
   echo "----------------------------------------------"
 }
 
-## Change all .bash_history to /dev/null
-find / -name .bash_history -exec ln -fs /dev/null {} \; 2> /dev/null
+if [[ -z $1 ]]; then
+  echo "Error: need a flag."
+  exit 1
+fi
+
+echo "$1" > /root/root.txt
