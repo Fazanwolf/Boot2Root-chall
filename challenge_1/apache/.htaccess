@@ -1,0 +1,10 @@
+AuthName "Private area"
+AuthUserFile /etc/apache2/.htpasswd
+AuthGroupFile /dev/null
+AuthName "Please Enter Password"
+AuthType Basic
+
+
+<Limit GET POST>
+	require valid-user
+</Limit>

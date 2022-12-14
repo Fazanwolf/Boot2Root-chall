@@ -1,0 +1,2 @@
+ppa:ondrej/php
+openssh-server apache2 apache2-utils libapache2-mod-php php-fpm
